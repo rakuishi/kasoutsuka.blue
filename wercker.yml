@@ -6,6 +6,9 @@ build:
     - script:
         name: Remove sass
         code: rm -rf public/assets/sass/*
+    - script:
+        name: Add nojekyll
+        code: touch public/.nojekyll
 deploy:
   steps:
     - install-packages:
