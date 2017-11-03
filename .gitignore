@@ -1,0 +1,4 @@
+.DS_Store
+/public
+/static/assets/css/style.css.map
+/.sass-cache

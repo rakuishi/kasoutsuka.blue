@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+//////////////////////////////////////////////////
+// Variable
+//////////////////////////////////////////////////
+
+$brand: #0555E0 !default;
+$accent: #F53515 !default;
+$dark-gray: #333 !default;
+$gray: #8F919D !default;
+$white: #FFFFFF;
+$border-gray: #D4DADf !default;
+$background: #F4FAFF !default;
+$grid-gutter: 16px !default;
+$max-width: 728px + $grid-gutter * 2 !default;
+$root-color: $dark-gray !default;
+$root-cursor: inherit !default;
+$root-line-height: 1.5 !default;
+$selection-color: $dark-gray !default;
+$opacity: 0.75;
+
+//////////////////////////////////////////////////
+// Import
+//////////////////////////////////////////////////
+
+@import 'sanitize', 'notosans';
+
+//////////////////////////////////////////////////
+// Base
+//////////////////////////////////////////////////
+
+body {
+  font-family: YakuHanJP, 'Droid Sans', -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK JP', 'NotoSansCJKjp', 'Helvetica Neue', 'Segoe UI', 'Noto Sans Japanese', 'ヒラギノ角ゴ ProN W3', Meiryo, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  word-break: break-all;
+  text-align: justify;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background: $white;
+}
+
+a, a:hover { color: $brand; }
+a:hover img { opacity: $opacity; }
+h1, h2, h3 { font-weight: 700; }
+
+//////////////////////////////////////////////////
+// Layout
+//////////////////////////////////////////////////
+
+.site-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 $grid-gutter;
+}
+
+.border-box {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.03);
+  border: 1px solid $border-gray;
+  border-radius: 4px;
+  background: $white;
+}
+
+.site-header-container {
+  background-color: $brand;
+}
+
+.site-header {
+  @extend .site-container;
+  padding: $grid-gutter * 2 $grid-gutter;
+
+  > .description {
+    margin-top: $grid-gutter;
+    font-size: 12px;
+    font-weight: bold;
+    color: $white;
+  }
+}
+
+.site-main {
+  background: $background;
+  padding: $grid-gutter * 2 0;
+}
+
+.entry-list-container {
+  @extend .site-container;
+}
+
+.entry-list-head {
+  margin: $grid-gutter 0;
+  font-size: 24px;
+}
+
+.entry-list-item {
+  list-style: none;
+  @extend .border-box;
+  &:not(:last-child) { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+  &:not(:first-child) { border-top-left-radius: 0; border-top-right-radius: 0; margin-top: -1px; }
+  &:hover { background: $background; }
+  > a {
+    display: block;
+    padding: $grid-gutter * 2;
+    > .title { font-size: 24px; color: $dark-gray; }
+    > .subtitle { color: $gray; }
+    > .published { font-size: 16px; color: $gray; }
+  }
+}
+
+.entry-container {
+  @extend .site-container;  
+}
+
+.entry-content {
+  @extend .border-box;
+}
+
+.entry-head {
+  padding: $grid-gutter * 2;
+  margin-bottom: $grid-gutter * 2;
+  border-bottom: 1px solid $border-gray;
+  > .title { font-size: 24px; }
+  > .subtitle { color: $gray; }
+  > .published { font-size: 16px; color: $gray; }
+}
+
+.entry-text {
+  padding: 0 $grid-gutter * 2;
+  
+  h2 { margin: 48px 0 16px; padding-bottom: 0.5em; font-size: 24px; font-weight: bold; color: $dark-gray; border-bottom: 1px solid $border-gray; }
+  h3 { margin: 16px 0; font-size: 20px; font-weight: bold; color: $dark-gray; }
+  p  { margin: 16px 0; }
+  a:hover { text-decoration: underline; }
+
+  ul, ol { margin: 24px 0; padding-left: 24px; }
+  ul { list-style: desc; }
+  ol { list-style: decimal; }
+  li { font-size: 18px; line-height: 1.6; }
+  li > ul { margin: 0; }
+
+  img { width: auto; max-width: 100%; }
+  p img { width: auto; max-width: 100%; border-radius: 4px; }
+  blockquote { margin: 24px 0; padding: 0 12px; border-left: 4px solid $border-gray; color: $dark-gray; }
+
+  table {
+    margin: 24px 0;
+    font-size: 14px;
+    th, td { border: 1px solid $border-gray; padding: 8px; }
+    th { background-color: $background; color: $dark-gray; }
+  }
+}
+
+.entry-banner {
+  text-align: center;
+  margin: $grid-gutter * 2 0;
+  > .banner-button { margin-bottom: 8px; }
+  > .banner-description { margin-bottom: 4px; }
+}
+
+.banner-button {
+  display: inline-block;
+  background: $accent;
+  color: $white;
+  border-radius: 4px;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  &:hover { color: $white; opacity: 0.75; }
+}
+
+.banner-description {
+  font-size: 12px;
+  color: $gray;
+}
+
+.banner-image {
+  display: block;
+  img { width: auto; max-width: 100%; }
+}
+
+.site-footer {
+  @extend .site-container;
+  padding: $grid-gutter * 2 $grid-gutter;
+  text-align: center;
+  > .copyright { margin-top: $grid-gutter; font-size: 14px; color: $gray; }
+  > .copyright a:hover { text-decoration: underline; }
+}

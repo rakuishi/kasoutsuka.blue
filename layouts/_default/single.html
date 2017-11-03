@@ -1,0 +1,35 @@
+{{ partial "header.html" . }}
+
+<main class="site-main">
+  <div class="entry-container">
+    <article class="entry-content" itemscope itemtype="http://schema.org/BlogPosting">
+      <div class="entry-head">
+        <h1 class="title" itemprop="name"><a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</a></h1>
+        <div class="subtitle">{{ .Params.Subtitle }}</div>
+        <div class="published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</div>
+      </div>
+      <section class="entry-text" itemprop="text">
+        {{ .Content }}
+      </section>
+      <div class="entry-banner">
+        <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-button">仮想通貨をはじめよう</a>
+        <div class="banner-description">僕は coincheck で仮想通貨を買っています。</div>
+        <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><img src="https://coincheck.com/images/affiliates/03_cc_banner_320x100.png" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin"></a>
+      </div>
+    </article>
+  </div>
+
+  {{ $related := .Site.RegularPages.Related . | first 5 }}
+  {{ with $related }}
+  <div class="entry-list-container">
+    <h2 class="entry-list-head">関連記事</h2>
+    <ul class="entry-list">
+      {{ range . }}
+        {{ .Render "summary"}}
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</main>
+
+{{ partial "footer.html" . }}
