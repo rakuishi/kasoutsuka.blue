@@ -3,6 +3,9 @@ build:
   steps:
     - arjen/hugo-build:
         version: "0.17"
+    - script:
+        name: Remove sass
+        code: rm -rf public/assets/sass/*
 deploy:
   steps:
     - install-packages:
