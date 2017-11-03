@@ -23,14 +23,14 @@ $opacity: 0.75;
 // Import
 //////////////////////////////////////////////////
 
-@import 'sanitize', 'yakuhanjp', 'droidsans', 'notosans';
+@import 'sanitize', 'yakuhanjp', 'droidsans';
 
 //////////////////////////////////////////////////
 // Base
 //////////////////////////////////////////////////
 
 body {
-  font-family: YakuHanJP, 'Droid Sans', -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK JP', 'NotoSansCJKjp', 'Helvetica Neue', 'Segoe UI', 'Noto Sans Japanese', 'ヒラギノ角ゴ ProN W3', Meiryo, sans-serif;
+  font-family: YakuHanJP, 'Droid Sans', -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK JP', 'Helvetica Neue', 'Segoe UI', 'Noto Sans Japanese', 'ヒラギノ角ゴ ProN W3', Meiryo, sans-serif;
   font-weight: normal;
   font-size: 18px;
   word-break: break-all;
