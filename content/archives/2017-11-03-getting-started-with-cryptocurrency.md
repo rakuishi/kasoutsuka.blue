@@ -1,7 +1,7 @@
 ---
 date: 2017-11-03T17:04:31+09:00
 draft: false
-slug: getting-started-with-cryptocurrency''
+slug: getting-started-with-cryptocurrency
 title: '仮想通貨をはじめよう'
 subtitle: '仮想通貨をこれからはじめるために必要な知識を配信します！'
 ---
