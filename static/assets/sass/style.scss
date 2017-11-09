@@ -19,6 +19,7 @@ $root-line-height: 1.5 !default;
 $selection-color: $dark-gray !default;
 $opacity: 0.75;
 $sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Noto Sans', 'Noto Sans CJK JP', 'Helvetica Neue', 'Segoe UI', 'Noto Sans Japanese', 'ヒラギノ角ゴ ProN W3', Meiryo, sans-serif;
+$breakpoint: 568px;
 
 //////////////////////////////////////////////////
 // Import
@@ -101,7 +102,8 @@ h1, h2, h3 { font-family: YakuHanJP, $sans; font-weight: 700; line-height: 1.3; 
   &:hover { background: $background; }
   > a {
     display: block;
-    padding: $grid-gutter * 2;
+    padding: $grid-gutter;
+    @media (min-width: $breakpoint) { padding: $grid-gutter * 2; }
     > .title { font-size: 22px; }
     > .subtitle { margin-top: 6px; color: $gray; line-height: 1.3; }
     > .published { color: $gray; }
@@ -117,7 +119,8 @@ h1, h2, h3 { font-family: YakuHanJP, $sans; font-weight: 700; line-height: 1.3; 
 }
 
 .entry-head {
-  padding: $grid-gutter * 2;
+  padding: $grid-gutter;
+  @media (min-width: $breakpoint) { padding: $grid-gutter * 2; }
   margin-bottom: $grid-gutter * 2;
   border-bottom: 1px solid $border-gray;
   > .title { font-size: 22px; }
@@ -140,7 +143,8 @@ h1, h2, h3 { font-family: YakuHanJP, $sans; font-weight: 700; line-height: 1.3; 
 }
 
 .entry-text {
-  padding: 0 $grid-gutter * 2;
+  padding: 0 $grid-gutter;
+  @media (min-width: $breakpoint) { padding: 0 $grid-gutter * 2; }
   
   h2 { margin: 48px 0 24px; padding-bottom: 0.5em; font-size: 22px; font-weight: bold; color: $dark-gray; border-bottom: 1px solid $border-gray; }
   h3 { margin: 24px 0; font-size: 20px; font-weight: bold; color: $dark-gray; }
