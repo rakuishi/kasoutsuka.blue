@@ -7,6 +7,10 @@
         <h1 class="title" itemprop="name"><a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</a></h1>
         <div class="subtitle">{{ .Params.Subtitle }}</div>
         <div class="published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</div>
+        <div class="share-button">
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="fb-share-button" data-href="{{ .Permalink }}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&amp;src=sdkpreparse"></a></div>
+        </div>
       </div>
       <section class="entry-text" itemprop="text">
         {{ .Content }}
@@ -14,7 +18,7 @@
       <div class="entry-banner">
         <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-button">仮想通貨をはじめよう</a>
         <div class="banner-description">僕は coincheck で仮想通貨を買っています。</div>
-        <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><img src="https://coincheck.com/images/affiliates/03_cc_banner_320x100.png" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin"></a>
+        <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><img src="https://coincheck.com/images/affiliates/03_cc_banner_540x180.png" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin"></a>
       </div>
     </article>
   </div>

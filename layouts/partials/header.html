@@ -6,17 +6,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="copyright" content="Copyright &copy; 2017 rakuishi All rights reserved" />
 <meta name="google-site-verification" content="vpn9wNNVOLoLUzueGJ0NSV5ds-KQ8Yg8FNfiBgFDG2Y" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@rakuishi07" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}" />
+<meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Params.Subtitle }}{{ end }}" />
 <link rel="stylesheet" href="/assets/css/style.css?v=171103" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ $isHomePage := eq .Title .Site.Title }}<title>{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}</title>
-{{ if eq $isHomePage true }}<meta name="description" content="{{ .Site.Params.Description }}">{{ end }}{{ if eq $isHomePage false }}<meta name="description" content="{{ .Params.Subtitle }}">{{ end }}
+<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Params.Subtitle }}{{ end }}">
 </head>
 <body>
 
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11&appId=129549081088405';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Facebook -->
+
 <header class="site-header-container" role="banner">
   <div class="site-header">
-    {{ if eq $isHomePage true }}<h1>{{ end }}<a href="/" class="hero"><img src="/assets/images/hero.svg" width="210" height="60" alt="{{ .Title }}" ></a>{{ if eq $isHomePage true }}</h1>{{ end }}
+    {{ if .IsHome }}<h1>{{ end }}<a href="/" class="hero"><img src="/assets/images/hero.svg" width="210" height="60" alt="{{ .Title }}" ></a>{{ if .IsHome }}</h1>{{ end }}
     <div class="description">{{ .Site.Params.Description }}</div>
   </div>
 </header>
