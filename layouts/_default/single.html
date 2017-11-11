@@ -32,7 +32,9 @@
     <h2 class="entry-list-head">関連記事</h2>
     <ul class="entry-list">
       {{ range . }}
-        {{ .Render "summary"}}
+        {{ if hasPrefix .RelPermalink "/archives/"  }}
+          {{ .Render "summary"}}
+        {{ end }}
       {{ end }}
     </ul>
   </div>
