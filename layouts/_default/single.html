@@ -1,6 +1,9 @@
 {{ partial "header.html" . }}
 
 <main class="site-main">
+  <div id="breadcrumb" class="entry-breadcrumb">
+    <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ .Site.BaseURL }}" itemprop="url">{{ .Site.Title }}</a></span><span>/</span><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ .Permalink }}" itemprop="url">{{ .Title }}</a></span>
+  </div>
   <div class="entry-container">
     <article class="entry-content" itemscope itemtype="http://schema.org/BlogPosting">
       <div class="entry-head">
@@ -17,8 +20,8 @@
       </section>
       <div class="entry-banner">
         <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-button">仮想通貨をはじめよう</a>
-        <div class="banner-description">僕は coincheck で仮想通貨を買っています。</div>
         <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><img src="https://coincheck.com/images/affiliates/03_cc_banner_540x180.png" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin"></a>
+        <div class="banner-description">僕は coincheck で仮想通貨を買っています。</div>
       </div>
     </article>
   </div>

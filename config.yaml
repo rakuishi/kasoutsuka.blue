@@ -6,7 +6,7 @@ metadataformat: yaml
 preservetaxonomynames: true
 
 params:
-  description: '仮想通貨好きエンジニア rakuishi が、仮想通貨をこれからはじめるために必要な知識を随時配信。'
+  description: '仮想通貨好きプログラマ rakuishi が、仮想通貨をこれからはじめるために必要な知識を随時配信。'
 
 related: 
   threshold: 50
