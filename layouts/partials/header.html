@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html amp lang="ja">
 <head>
 <meta charset="utf-8" />
 {{ .Hugo.Generator }}
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="copyright" content="Copyright &copy; 2017 rakuishi All rights reserved" />
 <meta name="google-site-verification" content="vpn9wNNVOLoLUzueGJ0NSV5ds-KQ8Yg8FNfiBgFDG2Y" />
 <meta name="twitter:card" content="summary" />
@@ -12,7 +12,24 @@
 <meta property="og:title" content="{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}" />
 <meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Params.Subtitle }}{{ end }}" />
 <meta property="og:image" content="/assets/images/kasoutsuka-icon.png" />
-<link rel="stylesheet" href="/assets/css/style.css?v=171103" />
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05JST" }}",
+  "image": ["{{ .Site.BaseURL }}assets/images/kasoutsuka-icon.png"],
+  "author": {
+    "@type": "Person",
+    "name": "rakuishi"
+  }
+}
+</script>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>{{ partial "style.css" . | safeCSS }}</style>
+<link rel="canonical" href="{{ .Permalink }}" />
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link rel="apple-touch-icon" href="/assets/images/kasoutsuka-icon.png" />
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -21,20 +38,13 @@
 </head>
 <body>
 
-<!-- Facebook -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11&appId=129549081088405';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<!-- Facebook -->
+<amp-analytics type="googleanalytics" id="analytics1">
+  <script type="application/json">{ "vars": { "account": "UA-25383114-5" }, "triggers": { "trackPageview": { "on": "visible", "request": "pageview" } } }</script>
+</amp-analytics>
 
 <header class="site-header-container" role="banner">
   <div class="site-header">
-    {{ if .IsHome }}<h1>{{ end }}<a href="/" class="hero"><img src="/assets/images/hero.svg" width="210" height="60" alt="{{ .Title }}" ></a>{{ if .IsHome }}</h1>{{ end }}
+    {{ if .IsHome }}<h1>{{ end }}<a href="/" class="hero"><amp-img src="/assets/images/hero.svg" width="210" height="60" alt="{{ .Title }}" ></a>{{ if .IsHome }}</h1>{{ end }}
     <div class="description">{{ .Site.Params.Description }}</div>
     <div class="nav">
       <a href="/about/">このサイトについて</a>

@@ -1,0 +1,5 @@
+<p>
+  {{ if .Get "href" }}<a href="{{ .Get "href" }}" target="_blank">{{ end }}
+    <amp-img src="{{ .Get "src" }}" width="{{ .Get "width" }}" height="{{ .Get "height" }}" {{ if .Get "alt" }}alt="{{ .Get "alt" }}" {{ end }}layout="responsive" />
+  {{ if .Get "href" }}</a>{{ end }}
+</p>

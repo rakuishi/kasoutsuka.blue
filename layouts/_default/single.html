@@ -9,18 +9,15 @@
       <div class="entry-head">
         <h1 class="title" itemprop="name"><a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</a></h1>
         <div class="subtitle">{{ .Params.Subtitle }}</div>
-        <div class="published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</div>
-        <div class="share-button">
-          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <div class="fb-share-button" data-href="{{ .Permalink }}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&amp;src=sdkpreparse"></a></div>
-        </div>
+        <time class="published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+        <div class="share-button"><a href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}" target="_blank" class="twitter"><amp-img src="/assets/images/twitter.png" width="32" height="32" alt="Twitter" /></a><a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" class="facebook"><amp-img src="/assets/images/facebook.png" width="32" height="32" alt="Facebook" /></a></div>
       </div>
       <section class="entry-text" itemprop="text">
         {{ .Content }}
       </section>
       <div class="entry-banner">
         <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-button">仮想通貨をはじめよう</a>
-        <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><img src="https://coincheck.com/images/affiliates/03_cc_banner_540x180.png" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin"></a>
+        <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><amp-img src="https://coincheck.com/images/affiliates/03_cc_banner_540x180.png" width="540" height="180" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin"></a>
         <div class="banner-description">僕は coincheck で仮想通貨を買っています。</div>
       </div>
     </article>

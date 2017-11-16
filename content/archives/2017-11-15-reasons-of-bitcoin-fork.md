@@ -23,7 +23,7 @@ subtitle: '国に管理されない世界初の通貨がどのような運命を
 
 一方、仮想通貨の XRP は、一秒あたり 1,500 件。仮想通貨ではありませんが、いい比較例として、VISA カードは一秒あたり 3,000 件とも言われています。それらと比べると、**ビットコインの一秒あたり 3 件は、雀の涙**というのがわかります。
 
-![XRP Transation Per Soconds](/images/2017/11/reasons-of-bitcoin-fork.png)
+{{<img src="/images/2017/11/reasons-of-bitcoin-fork.png" width="1304" height="650" alt="XRP Transation Per Soconds">}}
 
 > 出典：[XRP | Ripple](https://ripple.com/xrp/)
 

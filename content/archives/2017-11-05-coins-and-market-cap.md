@@ -24,7 +24,7 @@ Alternative coin は、訳すのが難しいのですが、ビットコイン以
 
 以下のサイトでは、現在発行されている仮想通貨を時価総額順に並べられています。
 
-<a href="https://coinmarketcap.com/" target="_blank">![](/images/2017/11/cryptocurrency-market-capitalizations.png)</a>
+{{<img src="/images/2017/11/cryptocurrency-market-capitalizations.png" width="1024" height="768" alt="coinmarketcap" href="https://coinmarketcap.com/">}}
 
 - [Cryptocurrency Market Capitalizations | CoinMarketCap](https://coinmarketcap.com/)
 

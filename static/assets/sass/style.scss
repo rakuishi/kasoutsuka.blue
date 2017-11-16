@@ -121,7 +121,7 @@ h1, h2, h3 { font-family: YakuHanJP, $sans; font-weight: 700; line-height: 1.3; 
     @media (min-width: $breakpoint) { padding: $grid-gutter * 2; }
     > .title { font-size: 22px; }
     > .subtitle { margin-top: 6px; color: $gray; line-height: 1.3; }
-    > .published { color: $gray; }
+    > .published { display: block; color: $gray; }
   }
 }
 
@@ -149,20 +149,12 @@ h1, h2, h3 { font-family: YakuHanJP, $sans; font-weight: 700; line-height: 1.3; 
   border-bottom: 1px solid $border-gray;
   > .title { font-size: 22px; }
   > .subtitle { margin-top: 6px; color: $gray; line-height: 1.3; }
-  > .published { color: $gray; }
+  > .published { display: block; color: $gray; }
   > .share-button {
-    margin-top: 6px;
-    height: 20px;
+    height: 32px;
     overflow: hidden;
     text-align: right;
-    > .twitter-share-button {
-      display: inline-block;
-      vertical-align: top;
-    }
-    > .fb-share-button {
-      display: inline-block;
-      span { vertical-align: top !important; }
-    }
+    > .twitter { margin-right: 4px; }
   }
 }
 

@@ -10,6 +10,8 @@ subtitle: '総ブロック数や GENESIS（創世記）ブロックを見て、�
 
 ![](/images/2017/11/realtime-bitcoin-transactions-1.png)
 
+{{<img src="/images/2017/11/realtime-bitcoin-transactions-1.png" width="1024" height="768" alt="Blockchain Explorer" href="https://chainflyer.bitflyer.jp/">}}
+
 - [Blockchain Explorer - chainFlyer](https://chainflyer.bitflyer.jp/)
 
 ## 総ブロック数
@@ -23,6 +25,7 @@ subtitle: '総ブロック数や GENESIS（創世記）ブロックを見て、�
 ## 取引は公開されている
 
 ![](/images/2017/11/realtime-bitcoin-transactions-2.png)
+{{<img src="/images/2017/11/realtime-bitcoin-transactions-2.png" width="1024" height="768" alt="Blockchain Explorer" href="https://chainflyer.bitflyer.jp/">}}
 
 試しにひとつブロックを覗いてみましょう。そのブロックの情報に加えて、そのブロックに含まれている全トランザクションが見えます。
 
