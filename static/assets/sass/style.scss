@@ -71,9 +71,11 @@ h1, h2, h3 { font-family: YakuHanJP, $sans; font-weight: 700; line-height: 1.3; 
 .site-header {
   @extend .site-container;
   padding: $grid-gutter;
-
+  > .title {
+    display: inline-block;
+  }
   > .description {
-    margin-top: $grid-gutter;
+    margin-top: $grid-gutter / 2;
     font-size: 12px;
     font-weight: bold;
     color: $white;

@@ -9,7 +9,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@rakuishi07" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:title" content="{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}" />
+<meta property="og:title" content="{{ .Title }} | {{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Site.Title }}{{ end }}" />
 <meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Params.Subtitle }}{{ end }}" />
 <meta property="og:image" content="/assets/images/kasoutsuka-icon.png" />
 <script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -18,7 +18,7 @@
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "headline": "{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}",
+  "headline": "{{ .Title }} | {{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Site.Title }}{{ end }}",
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05JST" }}",
   "image": ["{{ .Site.BaseURL }}assets/images/kasoutsuka-icon.png"],
   "author": {
@@ -33,7 +33,7 @@
 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 <link rel="apple-touch-icon" href="/assets/images/kasoutsuka-icon.png" />
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="{{ .Site.Title }}" />
-<title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
+<title>{{ .Title }} | {{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Params.Subtitle }}{{ end }}">
 </head>
 <body>
@@ -44,7 +44,7 @@
 
 <header class="site-header-container" role="banner">
   <div class="site-header">
-    {{ if .IsHome }}<h1>{{ end }}<a href="/" class="hero"><amp-img src="/assets/images/hero.svg" width="210" height="60" alt="{{ .Title }}" ></a>{{ if .IsHome }}</h1>{{ end }}
+    <a href="/" class="title">{{ if .IsHome }}<h1>{{ end }}<amp-img src="/assets/images/hero.svg" width="210" height="60" alt="{{ .Title }}" >{{ if .IsHome }}</h1>{{ end }}</a>
     <div class="description">{{ .Site.Params.Description }}</div>
     <div class="nav">
       <a href="/about/">このサイトについて</a>
