@@ -20,22 +20,18 @@
         <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><amp-img src="https://coincheck.com/images/affiliates/03_cc_banner_540x180.png" width="540" height="180" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin" layout="responsive" /></a>
         <div class="banner-description">僕は coincheck で仮想通貨を買っています。</div>
       </div>
+      {{ $related := .Site.RegularPages.Related . | first 5 }}
+      {{ with $related }}
+        <ul class="entry-list related-entry-list">
+          {{ range . }}
+            {{ if hasPrefix .RelPermalink "/archives/"  }}
+              {{ .Render "summary"}}
+            {{ end }}
+          {{ end }}
+        </ul>
+      {{ end }}
     </article>
   </div>
-
-  {{ $related := .Site.RegularPages.Related . | first 5 }}
-  {{ with $related }}
-  <div class="entry-list-container">
-    <h2 class="entry-list-head">関連記事</h2>
-    <ul class="entry-list">
-      {{ range . }}
-        {{ if hasPrefix .RelPermalink "/archives/"  }}
-          {{ .Render "summary"}}
-        {{ end }}
-      {{ end }}
-    </ul>
-  </div>
-  {{ end }}
 </main>
 
 {{ partial "footer.html" . }}
