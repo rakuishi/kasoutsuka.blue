@@ -3,12 +3,10 @@ date: 2017-11-07T20:24:37+09:00
 draft: false
 slug: realtime-bitcoin-transactions-on-chainflyer
 title: 'ビットコインの取引をリアルタイムで見てみよう'
-subtitle: '総ブロック数や GENESIS（創世記）ブロックを見て、ブロックチェーン上に記録された取引を覗いてみましょう。'
+subtitle: 'ビットコインの取引をリアルタイムで見れるサイト chainFlyer。取引はオープンであることを肌で感じ、ブロックチェーン上に記録された取引の確認の仕方を学びましょう。'
 ---
 
 ビットコインの取引をリアルタイムで見れるサイト <a href="https://chainflyer.bitflyer.jp/" target="_blank">chainFlyer</a> では、グラフィカルに、いま世界中で行われている取引を見ることができます。
-
-![](/images/2017/11/realtime-bitcoin-transactions-1.png)
 
 {{<img src="/images/2017/11/realtime-bitcoin-transactions-1.png" width="1024" height="768" alt="Blockchain Explorer" href="https://chainflyer.bitflyer.jp/">}}
 
@@ -24,7 +22,6 @@ subtitle: '総ブロック数や GENESIS（創世記）ブロックを見て、�
 
 ## 取引は公開されている
 
-![](/images/2017/11/realtime-bitcoin-transactions-2.png)
 {{<img src="/images/2017/11/realtime-bitcoin-transactions-2.png" width="1024" height="768" alt="Blockchain Explorer" href="https://chainflyer.bitflyer.jp/">}}
 
 試しにひとつブロックを覗いてみましょう。そのブロックの情報に加えて、そのブロックに含まれている全トランザクションが見えます。

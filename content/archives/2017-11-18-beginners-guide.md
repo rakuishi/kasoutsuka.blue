@@ -2,7 +2,7 @@
 date: 2017-11-18T08:48:52+09:00
 draft: false
 slug: beginners-guide
-title: '仮想通貨初心者ガイド（11/18 更新）'
+title: '仮想通貨初心者ガイド（11/22 更新）'
 subtitle: '仮想通貨をはじめるために必要な知識をざっと得るための記事です。販売所の選びかたから売り買いの仕方、仮想通貨の技術や背景も紹介します。'
 ---
 
@@ -55,6 +55,7 @@ subtitle: '仮想通貨をはじめるために必要な知識をざっと得る
 - [仮想通貨はワンコインから始められる](/archives/buy-bitcoin-with-one-coin/)
 - [仮想通貨を売り買いするときに注意したい値段の差（スプレッド）](/archives/spread-of-cryptocurrency-trading/)
 - [仮想通貨のクレジットカード決済は便利だけれど、手数料が高め](/archives/buy-bitcoin-with-creditcard/)
+- [仮想通貨をフィアット（Fiat）に戻すとは？](/archives/cryptocurrency-to-fiatcurrency/)
 
 ## 技術
 
@@ -73,3 +74,5 @@ subtitle: '仮想通貨をはじめるために必要な知識をざっと得る
 - [ビットコインの取引をリアルタイムで見てみよう](/archives/realtime-bitcoin-transactions-on-chainflyer/)
 - [ビットコインを送金するときの確認・承認・Confirmation とは何なのか？](/archives/what-are-bitcoin-confirmations/)
 - [何故、ビットコインは分裂するのか？まだまだ成長途中のシステムか、あるいは継ぎ接ぎだらけのシステムか？](/archives/reasons-of-bitcoin-fork/)
+- [ビットコインの抱える問題点とこれからの可能性（問題点編）](/archives/problem-and-potential-of-bitcoin-1/)
+- [ビットコインの抱える問題点とこれからの可能性（可能性編）](/archives/risk-and-potential-of-bitcoin-2/)

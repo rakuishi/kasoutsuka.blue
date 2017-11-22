@@ -3,7 +3,7 @@ date: 2017-11-10T22:33:07+09:00
 draft: false
 slug: what-are-bitcoin-confirmations
 title: 'ビットコインを送金するときの確認・承認・Confirmation とは何なのか？'
-subtitle: 'ビットコインを送金するのに時間がかかる根拠を、ブロックチェーンの仕組みから見ていきましょう。'
+subtitle: 'ビットコインを送金するのには時間がかかります。また、信用に値する取引には、確認数が大事です。その理由をブロックチェーンの仕組みから見ていきます。'
 ---
 
 [bitFlyer](https://bitflyer.jp/?bf=hus1mkdt) でビットコインを送金するときの注意書きには、以下のように書かれています。
