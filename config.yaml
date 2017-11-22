@@ -6,7 +6,7 @@ metadataformat: yaml
 preservetaxonomynames: true
 
 params:
-  description: '仮想通貨をこれからはじめる仮想通貨初心者の分からないを解決します！'
+  description: '仮想通貨をこれからはじめる仮想通貨初心者の「分からない」を解決します！'
 
 related: 
   threshold: 50
