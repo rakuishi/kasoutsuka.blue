@@ -6,6 +6,8 @@ title: 'ビットコインの取引をリアルタイムで見てみよう'
 subtitle: 'ビットコインの取引をリアルタイムで見れるサイト chainFlyer。取引はオープンであることを肌で感じ、ブロックチェーン上に記録された取引の確認の仕方を学びましょう。'
 ---
 
+{{<img src="/images/2017/11/bitcoin.svg" width="728" height="200" alt="bitcoin">}}
+
 ビットコインの取引をリアルタイムで見れるサイト <a href="https://chainflyer.bitflyer.jp/" target="_blank">chainFlyer</a> では、グラフィカルに、いま世界中で行われている取引を見ることができます。
 
 {{<img src="/images/2017/11/realtime-bitcoin-transactions-1.png" width="1024" height="768" alt="Blockchain Explorer" href="https://chainflyer.bitflyer.jp/">}}

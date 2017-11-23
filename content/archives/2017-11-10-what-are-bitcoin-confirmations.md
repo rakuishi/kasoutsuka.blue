@@ -6,6 +6,8 @@ title: 'ビットコインを送金するときの確認・承認・Confirmation
 subtitle: 'ビットコインを送金するのには時間がかかります。また、信用に値する取引には、確認数が大事です。その理由をブロックチェーンの仕組みから見ていきます。'
 ---
 
+{{<img src="/images/2017/11/bitcoin.svg" width="728" height="200" alt="bitcoin">}}
+
 [bitFlyer](https://bitflyer.jp/?bf=hus1mkdt) でビットコインを送金するときの注意書きには、以下のように書かれています。
 
 > ・ ビットコインの外部からのお預入はセキュリティーのためすべてチェックされます。最短 1 時間、最長翌営業日までかかることがあります。
@@ -56,7 +58,7 @@ subtitle: 'ビットコインを送金するのには時間がかかります。
 
 現在、ビックカメラではビットコインが使えますが、上記で見てきた限りだと確定するには 1 時間かかります。これでは会計に使えませんよね。どうやらビックカメラでは、ビットコインでの会計は 10 万円までという制限の代わりに、0 確認で取り扱っているようです。
 
-[ビックカメラ全店でbitcoin使えます！ | ビックカメラ](http://www.biccamera.co.jp/shopguide/campaign/bitcoin/index.html)
+- [ビックカメラ全店でbitcoin使えます！ | ビックカメラ](http://www.biccamera.co.jp/shopguide/campaign/bitcoin/index.html)
 
 ## 抑えておきたいポイントをさらにまとめ
 
