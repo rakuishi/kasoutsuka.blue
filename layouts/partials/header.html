@@ -14,6 +14,7 @@
 <meta property="og:image" content="/assets/images/kasoutsuka-icon.png" />
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -44,8 +45,8 @@
 
 <header class="site-header-container" role="banner">
   <div class="site-header">
-    <a href="/" class="title">{{ if .IsHome }}<h1>{{ end }}<amp-img src="/assets/images/hero.svg" width="210" height="60" alt="{{ .Title }}" >{{ if .IsHome }}</h1>{{ end }}</a>
-    <div class="description">{{ .Site.Params.Description }}</div>
+    <a href="/" class="title">{{ if .IsHome }}<h1>{{ end }}<amp-img src="/assets/images/hero.svg" width="175" height="50" alt="{{ .Title }}" >{{ if .IsHome }}</h1>{{ end }}</a>
+    <form action="//google.com/search" method="GET" target="_blank" accept-charset="UTF-8" class="header-search"><input type="text" name="q" placeholder="サイト内検索" autocomplete="off" class="searchbar"><input type="hidden" name="sitesearch" value="https://kasoutsuka.blue"></form>
     <div class="nav">
       <a href="/archives/beginners-guide/">初心者ガイド</a><a href="/about/">このサイトについて</a>
     </div>
