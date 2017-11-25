@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
 
 <main class="site-main">
+  {{ partial "adsense.html" . }}    
   <div id="breadcrumb" class="entry-breadcrumb">
     <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ .Site.BaseURL }}" itemprop="url">{{ .Site.Title }}</a></span><span>/</span><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ .Permalink }}" itemprop="url">{{ .Title }}</a></span>
   </div>
@@ -11,11 +12,11 @@
         <div class="subtitle">{{ .Params.Subtitle }}</div>
         <time class="published" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
         <div class="author">Written by <a href="/about/" itemprop="author">rakuishi</a></div>
-        <div class="share-button"><a href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}" target="_blank" class="twitter"><amp-img src="/assets/images/twitter.png" width="32" height="32" alt="Twitter" /></a><a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" class="facebook"><amp-img src="/assets/images/facebook.png" width="32" height="32" alt="Facebook" /></a></div>
       </div>
       <section class="entry-text" itemprop="text">
         {{ .Content }}
       </section>
+      <div class="entry-share"><a href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}" target="_blank" class="twitter"><amp-img src="/assets/images/twitter.png" width="32" height="32" alt="Twitter" /></a><a href="http://www.facebook.com/sharer.php?u={{ .Permalink }}" target="_blank" class="facebook"><amp-img src="/assets/images/facebook.png" width="32" height="32" alt="Facebook" /></a></div>      
       <div class="entry-banner">
         <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-button">仮想通貨をはじめよう</a>
         <a href="https://coincheck.com/?c=h_3cAbRPgrw" target="_blank" class="banner-image"><amp-img src="https://coincheck.com/images/affiliates/03_cc_banner_540x180.png" width="540" height="180" alt="ビットコイン取引高日本一の仮想通貨取引所 coincheck bitcoin" layout="responsive" /></a>

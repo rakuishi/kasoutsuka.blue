@@ -11,20 +11,25 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:title" content="{{ .Title }} | {{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Site.Title }}{{ end }}" />
 <meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Params.Subtitle }}{{ end }}" />
-<meta property="og:image" content="/assets/images/kasoutsuka-icon.png" />
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "headline": "{{ .Title }} | {{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Site.Title }}{{ end }}",
+  "description" : "{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Params.Subtitle }}{{ end }}",
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05JST" }}",
-  "image": ["{{ .Site.BaseURL }}assets/images/kasoutsuka-icon.png"],
+  "dateModified": "{{ .Date.Format "2006-01-02T15:04:05JST" }}",
   "author": {
     "@type": "Person",
     "name": "rakuishi"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}"
   }
 }
 </script>
@@ -45,10 +50,10 @@
 
 <header class="site-header-container" role="banner">
   <div class="site-header">
-    <a href="/" class="title">{{ if .IsHome }}<h1>{{ end }}<amp-img src="/assets/images/hero.svg" width="175" height="50" alt="{{ .Title }}" >{{ if .IsHome }}</h1>{{ end }}</a>
+    <a href="/" class="title">{{ if .IsHome }}<h1>{{ end }}<amp-img src="/assets/images/hero.svg" width="252" height="32" alt="{{ .Title }}" >{{ if .IsHome }}</h1>{{ end }}</a>
     <form action="//google.com/search" method="GET" target="_blank" accept-charset="UTF-8" class="header-search"><input type="text" name="q" placeholder="サイト内検索" autocomplete="off" class="searchbar"><input type="hidden" name="sitesearch" value="https://kasoutsuka.blue"></form>
     <div class="nav">
-      <a href="/archives/beginners-guide/" {{ if in .RelPermalink "/archives/beginners-guide/" }}class="nav-item-selected"{{ end }}>初心者ガイド</a><a href="/about/" {{ if in .RelPermalink "/about/" }}class="nav-item-selected"{{ end }}>このサイトについて</a>
+      <a href="/" {{ if .IsHome }}class="nav-item-selected"{{ end }}>ホーム</a><a href="/archives/beginners-guide/" {{ if in .RelPermalink "/archives/beginners-guide/" }}class="nav-item-selected"{{ end }}>初心者ガイド</a><a href="/about/" {{ if in .RelPermalink "/about/" }}class="nav-item-selected"{{ end }}>このサイトについて</a>
     </div>
   </div>
 </header>
