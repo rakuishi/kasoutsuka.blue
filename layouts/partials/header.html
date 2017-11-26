@@ -50,7 +50,7 @@
 
 <header class="site-header-container" role="banner">
   <div class="site-header">
-    <a href="/" class="title">{{ if .IsHome }}<h1>{{ end }}<amp-img src="/assets/images/hero.svg" width="252" height="32" alt="{{ .Title }}" >{{ if .IsHome }}</h1>{{ end }}</a>
+    <a href="/" class="title">{{ if .IsHome }}<h1>{{ end }}<amp-img src="/assets/images/hero.png" width="252" height="32" alt="{{ .Title }}" >{{ if .IsHome }}</h1>{{ end }}</a>
     <form action="//google.com/search" method="GET" target="_blank" accept-charset="UTF-8" class="header-search"><input type="text" name="q" placeholder="サイト内検索" autocomplete="off" class="searchbar"><input type="hidden" name="sitesearch" value="https://kasoutsuka.blue"></form>
     <div class="nav">
       <a href="/" {{ if .IsHome }}class="nav-item-selected"{{ end }}>ホーム</a><a href="/archives/beginners-guide/" {{ if in .RelPermalink "/archives/beginners-guide/" }}class="nav-item-selected"{{ end }}>初心者ガイド</a><a href="/about/" {{ if in .RelPermalink "/about/" }}class="nav-item-selected"{{ end }}>このサイトについて</a>
