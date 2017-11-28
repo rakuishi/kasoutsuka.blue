@@ -217,7 +217,9 @@ h1, h2, h3 { font-weight: 700; line-height: 1.3; }
 
   table {
     margin: 24px 0;
-    font-size: 15px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
     th, td { border: 1px solid $border-gray; padding: 8px; }
     th { background-color: $background; color: $dark-gray; }
   }
